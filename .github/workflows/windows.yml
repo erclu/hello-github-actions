@@ -1,0 +1,14 @@
+name: A windows workflow for my Hello World file
+on: pull_request
+
+jobs:
+  build-windows:
+    name: Hello windows action
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@master
+      - run:
+          shell:
+            pwsh: ./.github/actions/windows-env/entrypoint
+        env:
+          MY_NAME: "Luca"
