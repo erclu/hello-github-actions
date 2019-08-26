@@ -7,8 +7,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@master
-      - run:
-          shell:
-            pwsh: ./.github/actions/windows-env/entrypoint
+      - run: ./.github/actions/windows-env/entrypoint
+        shell: pwsh
         env:
           MY_NAME: "Luca"
